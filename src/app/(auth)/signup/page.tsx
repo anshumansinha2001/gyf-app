@@ -102,7 +102,7 @@ export default function SignUpForm() {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-800">
-      <div className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-md">
+      <div className="w-full max-w-md p-4 md:p-8 space-y-8 bg-white rounded-lg shadow-md mx-2">
         <div className="text-center">
           <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl mb-6">
             Join GYF
@@ -120,6 +120,7 @@ export default function SignUpForm() {
                   <FormLabel>Username</FormLabel>
                   <FormControl>
                     <Input
+                      placeholder="anshumansinha"
                       {...field}
                       onChange={(e) => {
                         field.onChange(e);
@@ -151,7 +152,11 @@ export default function SignUpForm() {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input {...field} name="email" />
+                    <Input
+                      placeholder="anshumansinha2001@gmail.com"
+                      {...field}
+                      name="email"
+                    />
                   </FormControl>
                   <p className="text-muted text-gray-400 text-sm">
                     We will send you a verification code
@@ -168,7 +173,12 @@ export default function SignUpForm() {
                 <FormItem>
                   <FormLabel>Password</FormLabel>
                   <FormControl>
-                    <Input type="password" {...field} name="password" />
+                    <Input
+                      placeholder="********"
+                      type="password"
+                      {...field}
+                      name="password"
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

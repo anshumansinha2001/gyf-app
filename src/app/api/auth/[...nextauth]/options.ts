@@ -13,12 +13,10 @@ export const authOptions: NextAuthOptions = {
         email: {
           label: "Email",
           type: "text",
-          placeholder: "anshuman@mail.com",
         },
         password: {
           label: "Password",
           type: "password",
-          placeholder: "********",
         },
       },
       async authorize(credentials: any): Promise<any> {
@@ -31,7 +29,7 @@ export const authOptions: NextAuthOptions = {
             ],
           });
           if (!user) {
-            throw new Error("No user found with this email");
+            throw new Error("No user found with this Credentails");
           }
           if (!user.isVerified) {
             throw new Error("Please verify your account before logging in");
@@ -43,7 +41,8 @@ export const authOptions: NextAuthOptions = {
           if (isPasswordCorrect) {
             return user;
           } else {
-            throw new Error("Incorrect password");
+            console.error("Incorrect password::", user.password);
+            throw new Error("Invalid Credentails");
           }
         } catch (err: any) {
           throw new Error(err);
@@ -76,6 +75,6 @@ export const authOptions: NextAuthOptions = {
   },
   secret: process.env.NEXTAUTH_SECRET,
   pages: {
-    signIn: "/sign-in",
+    signIn: "/signin",
   },
 };
