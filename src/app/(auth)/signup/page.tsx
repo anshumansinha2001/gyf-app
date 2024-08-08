@@ -120,7 +120,7 @@ export default function SignUpForm() {
                   <FormLabel>Username</FormLabel>
                   <FormControl>
                     <Input
-                      placeholder="anshumansinha"
+                      placeholder="anshumansinha_2001"
                       {...field}
                       onChange={(e) => {
                         field.onChange(e);
@@ -156,11 +156,12 @@ export default function SignUpForm() {
                       placeholder="anshumansinha2001@gmail.com"
                       {...field}
                       name="email"
+                      type="email"
                     />
                   </FormControl>
-                  <p className="text-muted text-gray-400 text-sm">
+                  {/* <p className="text-muted text-gray-400 text-sm">
                     We will send you a verification code
-                  </p>
+                  </p> */}
                   <FormMessage />
                 </FormItem>
               )}
@@ -200,7 +201,10 @@ export default function SignUpForm() {
         <div className="text-center mt-4">
           <p>
             Already a member?{" "}
-            <Link href="/signin" className="text-blue-600 hover:text-blue-800">
+            <Link
+              href="/signin"
+              className="text-blue-600 hover:text-blue-800 font-bold"
+            >
               Sign in
             </Link>
           </p>

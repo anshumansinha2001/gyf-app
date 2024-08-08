@@ -1,4 +1,5 @@
-// import Navbar from '@/components/Navbar';
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 export default function RootLayout({
   children,
@@ -7,8 +8,9 @@ export default function RootLayout({
 }>) {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* <Navbar /> */}
+      <Navbar />
       {children}
+      <Footer />
     </div>
   );
 }

@@ -73,8 +73,8 @@ export default function SignInForm() {
               control={form.control}
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email/Username</FormLabel>
-                  <Input {...field} />
+                  <FormLabel>Identifier</FormLabel>
+                  <Input placeholder="Your Email or Username" {...field} />
                   <FormMessage />
                 </FormItem>
               )}
@@ -85,7 +85,11 @@ export default function SignInForm() {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Password</FormLabel>
-                  <Input type="password" {...field} />
+                  <Input
+                    type="password"
+                    placeholder="Your Password"
+                    {...field}
+                  />
                   <FormMessage />
                 </FormItem>
               )}
@@ -102,11 +106,23 @@ export default function SignInForm() {
             </Button>
           </form>
         </Form>
-        <div className="text-center mt-4">
+        <div className="text-center mt-4 space-y-4">
           <p>
             Not a member yet?{" "}
-            <Link href="/signup" className="text-blue-600 hover:text-blue-800">
+            <Link
+              href="/signup"
+              className="text-blue-600 hover:text-blue-800 font-bold"
+            >
               Sign up
+            </Link>
+          </p>
+          <p>
+            Return to {""}
+            <Link
+              href="/"
+              className="bg-gray-800 hover:bg-gray-700 text-white p-2 rounded-md font-medium text-sm"
+            >
+              Home
             </Link>
           </p>
         </div>
