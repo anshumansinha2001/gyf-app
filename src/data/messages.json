@@ -13,5 +13,15 @@
         "title": "Message from user.dev",
         "content": "Do you have any book recommendations?",
         "received": "1 day ago"
+    },
+    {
+        "title": "Message from Alex_Johnson",
+        "content": "Are you attending the tech conference next week?",
+        "received": "30 minutes ago"
+    },
+    {
+        "title": "Message from Emma_Williams",
+        "content": "Can you help me with my project setup?",
+        "received": "3 hours ago"
     }
 ]
